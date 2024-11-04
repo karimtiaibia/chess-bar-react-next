@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 const GlobalStyles = createGlobalStyle`
     body {
         background: #ffffff();
+        list-style: none;
+        text-align: center;
     }
 `;
 
@@ -15,14 +17,12 @@ const Container = styled.body`
     width: 100vw;
     min-height: 100vh;
     margin: 2vh;
-    text-align: center;
 `;
 
 const StyledLayout = ({ children }) => {
     return (
         <>
             <GlobalStyles />
-            
             <Container>
                 <Header />
                 {children}

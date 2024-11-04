@@ -2,21 +2,26 @@ import React from "react"
 
 export default function Tournaments() {
     return (
-        <>
-            <h2>Inscription</h2>
+        <div class="next-tournaments">
+        <h2>Prochains Tournois</h2>
+        <label for="city-select"></label>
+        <select aria-label="Sélécteur de villes" name="city-select" id="city-select">
+            <option selected value="">-- Sélectionnez une ville --</option>
+            {/* <% for (city of city) { %> */}
+                {/* <option value='<%= city.city %>'><%= city.city %></option> */}
+            {/* <% } %> */}
+        </select>
 
-            <form action="/register" method="POST" >
-                <label for="pseudo">Pseudo : </label>
-                <input required id="pseudo" type="pseudo" name="pseudo" />
-
-                <label for="email">Email : </label>
-                <input required id="email" type="email" name="email" />
-                
-                <label for="password">Mot de passe : </label>
-                <input required id="password" type="password" name="password" />
-                
-                <button id="submitRegister" >Créer mon compte</button>
-            </form>
-        </>
+        {/* <% for (tournament of tournament) { %> */}
+            <section class="tournaments" data-city="<%= tournament.city %>">
+                <div>
+                    <img src="../img/<%= tournament.logo %>"></img>
+                </div>
+                {/* <h2><a href="/bars/<%=tournament.id%>"><%= tournament.name %> <%= " - " %> <%= tournament.city %></a></h2> */}
+                {/* <h3><%= new Date(tournament.date).toLocaleDateString('fr-FR') %></h3> */}
+                {/* <h4><%= tournament.description %></h4> */}
+            </section>
+        {/* <% } %> */}
+    </div>
     )
 };
